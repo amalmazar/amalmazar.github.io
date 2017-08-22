@@ -1,0 +1,319 @@
+/*/////////////////////////////////////////////
+/////////////  Primary Body Styles
+/////////////////////////////////////////////*/
+
+body {
+    background-color: #f4f4f4;
+    background-image: url(images/extra_clean_paper.png);
+    background-attachment: fixed;
+    background-repeat: repeat;
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    color: #a8a8a8;
+}
+
+/*/////////////////////////////////////////////
+/////////////  Navigation
+/////////////////////////////////////////////*/
+
+nav {
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+    box-shadow: 0px 0px 2px #4b4b4b;
+    z-index: 1;
+    box-sizing: border-box;
+    height: 75px !important;
+}
+
+.navbar-header {
+    position: relative;
+    height: 75px;
+}
+
+.navbar-header a {
+    background-color: #4aaaa5 !important;
+    font-family: 'Georgia', Times, Times New Roman, serif;
+    color: #fff !important;
+    font-size: 250%;
+    height: 100%;
+}
+
+.navbar-nav a {
+    font-size: 120%;
+    border-left: 1px solid #ccc;
+    position: relative;
+    color: #999 !important;
+    float: right;
+    height: inherit;
+}
+
+.navbar ul {
+    float: right;
+    padding-top: 15px;
+}
+
+.navbar-nav li:first-child a {
+    border-left: #fff;
+}
+
+.navbar-default a:hover, .navbar-brand a:hover, .logo a:hover {
+    color: #337a76 !important;
+} 
+
+
+/*/////////////////////////////////////////////
+/////////////  Main Content Boxes
+/////////////////////////////////////////////*/
+
+
+.container-fluid {
+    margin-bottom: 150px !important;
+}
+.left-box {
+    float: left;
+    background-color: #fff;
+    box-shadow: 0px 0px .5px #ccc;
+    border: 1px solid #ddd;
+    padding: 30px;
+    width: 100%;
+}
+
+.right-box {
+    text-align: center;
+    float: right;
+    background-color: #fff;
+    box-shadow: 0px 0px .5px #ccc;
+    border: 1px solid #ddd;
+    padding: 2vh;
+    width: 100%;
+}
+
+.left-box img {
+    height: 200px;
+    display: inline;
+    float: left;
+    padding: 0 15px 0 0px
+    
+}
+
+/*/////////////////////////////////////////////
+/////////////  Fonts
+/////////////////////////////////////////////*/
+
+h1, h2, h3 {
+    color: #4aaaa5 !important;
+    font-family: 'Georgia', Times, Times New Roman, serif !important;
+    line-height: 150% !important;
+}
+
+p {
+    color: #a8a8a8 !important;
+    text-align: left !important;
+    margin: 0;
+    font-size: 120%;
+    line-height: 140%;
+}
+
+a {
+    text-decoration: none;
+    color: #ccc;
+}
+
+a:hover {
+    color: #32736f;
+}
+
+a:active {
+    color: #444;
+}
+
+b {
+    font-weight: bold;
+}
+
+footer p {
+    text-align: center !important;
+}
+
+
+i {
+    font-size: 300%;
+    color: #4aaaa5;
+    padding: 0px 10px;
+}
+
+i:hover {
+    color: #337975;
+}
+
+
+/*/////////////////////////////////////////////
+/////////////  Other Items
+/////////////////////////////////////////////*/
+
+.line {
+    content: " ";
+    background-color: #ccc;
+    height: 2px;
+    margin-bottom: 10px;
+}
+
+.figure {
+    background-color: #fff;
+    position: relative;
+    float: left;
+    margin: 20px 20px;
+    padding: 0px !important;
+}
+
+.figure img {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    padding: 0px !important;
+}
+
+.figure-caption {
+    position: absolute;
+    background-color: #4aaaa5;
+    color: #fff;
+    padding: 10px;
+    width: 100%;
+    top: 60%;
+    box-sizing: border-box;
+}
+
+input[type=text]{
+        width: 100%;
+        height: 35px;
+        color: #ccc;
+        font-size: inherit;
+        padding: 10px;
+        border: 1px solid #ccc;
+}
+
+textarea {
+        resize: both;
+        overflow: auto;
+        width: 100%;
+        height: 200px;
+        border: 1px solid #ccc;
+        font-size: inherit;
+        color: #ccc;
+        padding: 10px;
+    }
+
+button {
+    
+}
+
+/*/////////////////////////////////////////////
+/////////////  Footer
+/////////////////////////////////////////////*/
+
+footer {
+    background-color: #666;
+    border-top: 5px solid #4aaaa5;
+    position: fixed;
+    bottom: 0;
+    min-height: 50px;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    padding: 35px 30px;
+    height: 10vh;
+}
+
+
+/*/////////////////////////////////////////////
+/////////////  Media Queries
+/////////////////////////////////////////////*/
+
+@media screen and (max-width: 980px) {
+    
+    .row {
+        margin: 0 auto !important;
+        width: 75%;
+    }
+    
+    .left-box {
+        margin: 0 auto 20px auto !important;
+    }
+    
+    .right-box {
+        display: block;
+        float: left;
+    }
+} 
+
+
+@media screen and (max-width: 760px) {
+    
+    
+    nav {
+        height: auto;
+    }
+    .navbar {
+        text-align: center;
+    }
+    .navbar-header {
+        text-align: center;
+        background-color: #4aaaa5 !important;
+    }
+    
+    .navigation-bar {
+        background-color: #fff;
+        border-bottom: 1px solid #ccc;
+        box-shadow: .5px .5px 10px rgba(0, 0, 0, 0.28);
+    }
+    
+    .navbar ul {
+        float: none;
+        display: inline-block;
+        margin: 0 auto !important;
+    }
+    
+    .navbar li a {
+        border-left: 0 !important;
+        border-top: 1px solid #ccc;
+    }
+    
+    .navbar li:first-child a {
+        border-top: none !important;
+        padding-top: 0;
+    } 
+    
+    .navbar-header a {
+        margin-left: 0 !important;
+        text-align: center;
+}
+    
+    .row {
+        margin: 0 auto !important;
+        width: 75%;
+    }
+    
+    .left-box {
+        margin: 0 auto 20px auto !important;
+    }
+    
+    .right-box {
+        display: block;
+        float: left;
+        margin: 10px auto 120px auto;
+    }
+} 
+
+
+@media screen and (max-width: 640px) {
+    .col-md-6 {
+        width: 100% !important;
+    }
+    .figure img {
+        width: 100% !important;
+    }
+    figcaption {
+        font-size: 10px;
+    }
+}
+
