@@ -1,0 +1,197 @@
+/*///// fonts and other stuff //////*/
+
+body {
+    background: url(img/crystal-bg.gif), linear-gradient(rgba(160, 220, 230, 0.28), rgba(167, 157, 101, 0.37));
+    background-repeat: repeat;
+    background-attachment: fixed;
+    font-family: 'Josefin Sans', sans-serif; /* 100, 300 */
+    color: #fff !important;
+}
+
+* {
+    border-radius: 2px;
+}
+
+h3, h4 {
+    color: #b7b7b7 !important;
+    font-family: 'Josefin Sans', sans-serif !important; /*300, 500*/
+    font-size: 50px;
+    font-weight: 300;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+p {
+    font-family: 'Playfair Display', serif;
+    color: #b7b7b7;
+    font-size: 200%;
+}
+
+.jumbotron {
+/*    box-shadow: .5px .5px 10px #000;  */
+    background-color: rgba(255, 255, 255, 0) !important;
+    text-align: center;
+    
+}
+
+h1 {
+    font-family: 'Josefin Sans', sans-serif !important;
+    font-weight: 300;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-size: 400% !important;
+    color: #747474 !important;
+}
+
+h2 {
+    font-family: 'Josefin Sans', sans-serif !important;
+    font-weight: 100;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #747474 !important;
+}
+
+.jumbotron p {
+    font-family: 'Playfair Display', serif;
+    color: #b4b4b4;
+}
+
+.star {
+    padding-right: 30px;
+    padding-bottom: 12px;
+}
+
+.jumbotron span {
+    font-style: italic;
+}
+.row {
+    margin: 40px auto !important;
+    width: 90vw;
+}
+
+
+/*///// Game Stage //////*/
+
+.game-stage { 
+    text-align: center;
+    padding: 20px;
+    box-shadow: 1px 1px 6px rgba(77, 77, 77, 0.5);
+    background-color: rgba(255, 255, 255, 0.52);
+}
+
+.game-stage h1 {
+    font-size: 80px;   
+}
+
+.col-md-6 {
+    text-align: center;
+}
+
+#goalValue, #playerValue {
+    font-family: 'Playfair Display', serif !important;
+    font-weight: 400;
+    color: #747474;
+    font-size: 900%;
+    text-align: center;
+    line-height: 120px;
+}
+
+.col-md-3 {
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 270px;
+}
+
+#orange-crystal-box {
+    background-image: url(img/crystal_orange.png);
+    background-size: 150px;
+    background-position: center;
+}
+#orange-crystal-box:hover {
+    background-image: url(img/crystal_orange-hover.png);
+    background-size: 150px;
+    background-position: center;
+} 
+#green-crystal-box {
+    background-image: url(img/crystal_green.png);
+    background-size: 150px;
+    background-position: center;
+}
+#green-crystal-box:hover {
+    background-image: url(img/crystal_green-hover.png);
+    background-size: 150px;
+    background-position: center;
+} 
+#red-crystal-box {
+    background-image: url(img/crystal_red.png);
+    background-size: 150px;
+    background-position: center;
+}
+#red-crystal-box:hover {
+    background-image: url(img/crystal_red-hover.png);
+    background-size: 150px;
+    background-position: center;
+} 
+#blue-crystal-box {
+    background-image: url(img/crystal_blue.png);
+    background-size: 150px;
+    background-position: center;
+}
+
+#blue-crystal-box:hover {
+    background-image: url(img/crystal_blue-hover.png);
+    background-size: 150px;
+    background-position: center;
+} 
+
+#winnerSign h2, #loserSign h2 {
+    color: rgb(104, 83, 114);
+    font-size: 200%;
+    font-family: 'Playfair Display', serif;
+    display: inline;
+}
+
+#winnerSign p, #loserSign p {
+    color: #939393;
+    padding-top: 50px;
+    font-size: 150%;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+}
+
+
+#winnerSign img, #loserSign img {
+    display: inline;
+}
+
+#winnerSign, #loserSign {
+    position: fixed;
+    z-index: 1;
+    width: 500px;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -250px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: .5px .5px 10px #000;
+    background-color: rgba(255, 255, 255, 0.65);
+    display: none;
+}
+
+/*///// user Guest Entry //////*/
+
+.userGuessEntry {
+    margin-top: 20px !important;
+}
+
+
+input {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    font-size: 50px !important;
+    border: 10px solid rgb(74, 66, 68) !important;
+    font-weight: 100 !important;
+}
