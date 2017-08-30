@@ -68,6 +68,15 @@ function initializeGame() {
 }
 
 function resetGame() {
+    ($("#orange-crystal-box").show());
+    ($("#green-crystal-box").show());
+    ($("#red-crystal-box").show());
+    ($("#blue-crystal-box").show());
+    ($("#orange-dummy-crystal").hide());
+    ($("#green-dummy-crystal").hide());
+    ($("#red-dummy-crystal").hide());
+    ($("#blue-dummy-crystal").hide());
+    clickCrystals();
     crystalGame.goalValue = calculateGoalValue(19,120);
     crystalGame.playerValue = 0;
     document.getElementById("goalValue").innerHTML = crystalGame.goalValue;
@@ -89,6 +98,26 @@ var generateCrystalValue = function(min, max) {
     return Math.floor(Math.random()*(max-min)+min);
 }
 
+// Click crystals to make sound and add value to player count
+function clickCrystals() {
+    $("#orange-crystal-box").click(function() {
+        playGameSounds("assets/sound/chime1.wav");
+        addToPlayerValue(crystalGame.crystalValues[0]);
+    });
+    $("#green-crystal-box").click(function() {
+        playGameSounds("assets/sound/chime2.wav");
+        addToPlayerValue(crystalGame.crystalValues[1]);
+    });
+    $("#red-crystal-box").click(function() {
+        playGameSounds("assets/sound/chime3.wav");
+        addToPlayerValue(crystalGame.crystalValues[2]);
+    });
+    $("#blue-crystal-box").click(function() {
+        playGameSounds("assets/sound/chime4.wav");
+        addToPlayerValue(crystalGame.crystalValues[3]);
+    });
+}
+
 // Our randomly generated goalValue
 var calculateGoalValue = function(min, max) {
     return Math.floor(Math.random()*(max-min)+min);
@@ -101,24 +130,6 @@ function playGameSounds(soundFile){
     audio.volume = 0.1;
 }
 
-// Click crystals to make sound and add value to player count
-$("#orange-crystal-box").click(function() {
-        playGameSounds("assets/sound/chime1.wav");
-        addToPlayerValue(crystalGame.crystalValues[0]);
-    });
-$("#green-crystal-box").click(function() {
-        playGameSounds("assets/sound/chime2.wav");
-        addToPlayerValue(crystalGame.crystalValues[1]);
-    });
-$("#red-crystal-box").click(function() {
-        playGameSounds("assets/sound/chime3.wav");
-        addToPlayerValue(crystalGame.crystalValues[2]);
-    });
-$("#blue-crystal-box").click(function() {
-        playGameSounds("assets/sound/chime4.wav");
-        addToPlayerValue(crystalGame.crystalValues[3]);
-    })
-
 // You can put anything into a function you pass parameters into, because it's essentially just a placeholder.
 function addToPlayerValue(butt) {
      crystalGame.playerValue = butt + crystalGame.playerValue;
@@ -128,11 +139,27 @@ function addToPlayerValue(butt) {
 
 function determineWinOrLoss() {
     if(crystalGame.playerValue === crystalGame.goalValue) {
+        ($("#orange-crystal-box").hide());
+        ($("#green-crystal-box").hide());
+        ($("#red-crystal-box").hide());
+        ($("#blue-crystal-box").hide());
+        ($("#orange-dummy-crystal").show());
+        ($("#green-dummy-crystal").show());
+        ($("#red-dummy-crystal").show());
+        ($("#blue-dummy-crystal").show());
         crystalGame.winCount++;
         showWinOrLoss("winCount", crystalGame.winCount);
         toggleGameStatusSign("#winnerSign", 'block');
     }
     else if(crystalGame.playerValue > crystalGame.goalValue) {
+        ($("#orange-crystal-box").hide());
+        ($("#green-crystal-box").hide());
+        ($("#red-crystal-box").hide());
+        ($("#blue-crystal-box").hide());
+        ($("#orange-dummy-crystal").show());
+        ($("#green-dummy-crystal").show());
+        ($("#red-dummy-crystal").show());
+        ($("#blue-dummy-crystal").show());
         crystalGame.loseCount++;
         showWinOrLoss("lossCount", crystalGame.loseCount);
         toggleGameStatusSign("#loserSign", 'block');
