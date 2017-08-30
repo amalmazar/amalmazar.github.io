@@ -53,22 +53,22 @@
             // 2. Generate new random number for goalValue
 
 /* ////////////////////////// THE GAME ///////////////////////////*/ 
+
 var crystalGame = {
     goalValue: 0,
     playerValue: 0,
     winCount: 0,
     loseCount: 0,
     crystalValues: [0, 0, 0, 0],
-    minCrystalValue: 1,
-    maxCrystalValue: 12,
 }
 
 function initializeGame() {
+    playGameSounds("assets/sound/music.mp3");
     resetGame();
 }
 
 function resetGame() {
-    crystalGame.goalValue = calculateGoalValue.randomValueFromRange(19,120);
+    crystalGame.goalValue = calculateGoalValue(19,120);
     crystalGame.playerValue = 0;
     document.getElementById("goalValue").innerHTML = crystalGame.goalValue;
     document.getElementById("playerValue").innerHTML = crystalGame.playerValue;
@@ -77,9 +77,10 @@ function resetGame() {
     setCrystalValues();
 }
 
+// Determines random crystal value
 function setCrystalValues() {
     for(var i = 0; i < crystalGame.crystalValues.length; i++) {
-        crystalGame.crystalValues[i] = generateCrystalValue(crystalGame.minCrystalValue,crystalGame.maxCrystalValue);
+        crystalGame.crystalValues[i] = generateCrystalValue(1,12);
     }
 }
 
@@ -89,35 +90,36 @@ var generateCrystalValue = function(min, max) {
 }
 
 // Our randomly generated goalValue
-var calculateGoalValue = {
-         randomValueFromRange : function(min, max) {
-            return Math.floor(Math.random()*(max-min)+min);
-         }
+var calculateGoalValue = function(min, max) {
+    return Math.floor(Math.random()*(max-min)+min);
 }
 
-function clickSound(soundFile){
+// Constructs audio
+function playGameSounds(soundFile){
     var audio = new Audio(soundFile);
     audio.play();
- }
+    audio.volume = 0.1;
+}
 
+// Click crystals to make sound and add value to player count
 $("#orange-crystal-box").click(function() {
-        clickSound("assets/sound/chime1.wav");
+        playGameSounds("assets/sound/chime1.wav");
         addToPlayerValue(crystalGame.crystalValues[0]);
     });
 $("#green-crystal-box").click(function() {
-        clickSound("assets/sound/chime2.wav");
+        playGameSounds("assets/sound/chime2.wav");
         addToPlayerValue(crystalGame.crystalValues[1]);
     });
 $("#red-crystal-box").click(function() {
-        clickSound("assets/sound/chime3.wav");
+        playGameSounds("assets/sound/chime3.wav");
         addToPlayerValue(crystalGame.crystalValues[2]);
     });
 $("#blue-crystal-box").click(function() {
-        clickSound("assets/sound/chime4.wav");
+        playGameSounds("assets/sound/chime4.wav");
         addToPlayerValue(crystalGame.crystalValues[3]);
     })
 
-
+// You can put anything into a function you pass parameters into, because it's essentially just a placeholder.
 function addToPlayerValue(butt) {
      crystalGame.playerValue = butt + crystalGame.playerValue;
      document.getElementById("playerValue").innerHTML = crystalGame.playerValue;
@@ -126,12 +128,12 @@ function addToPlayerValue(butt) {
 
 function determineWinOrLoss() {
     if(crystalGame.playerValue === crystalGame.goalValue) {
-        crystalGame.winCount = crystalGame.winCount + 1;
+        crystalGame.winCount++;
         showWinOrLoss("winCount", crystalGame.winCount);
         toggleGameStatusSign("#winnerSign", 'block');
     }
     else if(crystalGame.playerValue > crystalGame.goalValue) {
-        crystalGame.loseCount = crystalGame.loseCount + 1;
+        crystalGame.loseCount++;
         showWinOrLoss("lossCount", crystalGame.loseCount);
         toggleGameStatusSign("#loserSign", 'block');
             }
@@ -154,53 +156,6 @@ function userReset() {
     });
 }
 
-userReset()
+userReset();
 initializeGame();
 console.log(crystalGame);
-
-var audio = new Audio('assets/sound/music.mp3');
-audio.play();
-
-/*///////////////////////// DO NOT NEED, but keeping for reference ///////////////////////////////
-        
-// Objects for each of the crystals, with random numbers inside of them
-var orangeCrystal = {
-         randomValueFromRange : function(min, max) {
-            return Math.floor(Math.random()*(max-min)+min);
-         }
-}
-var greenCrystal = {
-         randomValueFromRange : function(min, max) {
-            return Math.floor(Math.random()*(max-min)+min);
-         }
-}
-var redCrystal = {
-         randomValueFromRange : function(min, max) {
-            return Math.floor(Math.random()*(max-min)+min);
-         }
-}
-var blueCrystal = {
-         randomValueFromRange : function(min, max) {
-            return Math.floor(Math.random()*(max-min)+min);
-         }
-}
-
-// Creates a variable for the crystal's values
-var orangeCrystalValue = orangeCrystal.randomValueFromRange(1, 12);
-var greenCrystalValue = greenCrystal.randomValueFromRange(1, 12);
-var redCrystalValue = redCrystal.randomValueFromRange(1, 12);
-var blueCrystalValue = blueCrystal.randomValueFromRange(1, 12);
-     
-// Checking the functionality of the crystal objects
-console.log(orangeCrystalValue + " is the orange crystal's value.");
-console.log(greenCrystalValue + " is the green crystal's value.");
-console.log(redCrystalValue + " is the red crystal's value.");
-console.log(blueCrystalValue + " is the blue crystal's value.");
-
-
-// When mousing over the crystals, show their hover state
-//$( "#col-md-3 orange-crystal-box" ).mouseover(function(){
-//    $(this).css("background-color", "red");
-//    });
-
-/*//////////////////////////////////////////////////////////////////////////////////////*/
