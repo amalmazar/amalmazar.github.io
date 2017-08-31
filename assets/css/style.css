@@ -9,7 +9,16 @@ body {
 }
 
 * {
-    border-radius: 2px;
+    border-radius: 4px;
+}
+
+a {
+    color: #859568 !important;
+}
+
+a:hover {
+    color: #747474 !important;
+    text-decoration: none !important;
 }
 
 h3, h4 {
@@ -28,7 +37,6 @@ p {
 }
 
 .jumbotron {
-/*    box-shadow: .5px .5px 10px #000;  */
     background-color: rgba(255, 255, 255, 0) !important;
     text-align: center;
     
@@ -102,70 +110,60 @@ h2 {
     height: 270px;
 }
 
-#orange-crystal-box {
-    background-image: url(img/crystal_orange.png);
+.real-crystal {
+    display: block;
     background-size: 150px;
     background-position: center;
 }
-#orange-crystal-box:hover {
+
+.orange-crystal-box {
+    background-image: url(img/crystal_orange.png);
+}
+.orange-crystal-box:hover {
     background-image: url(img/crystal_orange-hover.png);
-    background-size: 150px;
-    background-position: center;
 } 
-#green-crystal-box {
+.green-crystal-box {
     background-image: url(img/crystal_green.png);
     background-size: 150px;
     background-position: center;
 }
-#green-crystal-box:hover {
+.green-crystal-box:hover {
     background-image: url(img/crystal_green-hover.png);
-    background-size: 150px;
-    background-position: center;
 } 
-#red-crystal-box {
+.red-crystal-box {
     background-image: url(img/crystal_red.png);
-    background-size: 150px;
-    background-position: center;
 }
-#red-crystal-box:hover {
+.red-crystal-box:hover {
     background-image: url(img/crystal_red-hover.png);
-    background-size: 150px;
-    background-position: center;
 } 
-#blue-crystal-box {
+.blue-crystal-box {
     background-image: url(img/crystal_blue.png);
-    background-size: 150px;
-    background-position: center;
 }
 
-#blue-crystal-box:hover {
+.blue-crystal-box:hover {
     background-image: url(img/crystal_blue-hover.png);
-    background-size: 150px;
-    background-position: center;
 } 
 
-#orange-dummy-crystal {
+.dummy-crystal {
+    background-size: 150px;
+    background-position: center;
+    display: none;
+}
+
+.orange-bg {
     background-image: url(img/crystal_orange.png);
-    background-size: 150px;
-    background-position: center;
 }
 
-#green-dummy-crystal {
+.green-bg {
     background-image: url(img/crystal_green.png);
-    background-size: 150px;
-    background-position: center;
 }
 
-#red-dummy-crystal {
+.red-bg {
     background-image: url(img/crystal_red.png);
-    background-size: 150px;
-    background-position: center;
 }
 
-#blue-dummy-crystal {
+.blue-bg {
     background-image: url(img/crystal_blue.png);
-    background-size: 150px;
-    background-position: center;
 }
 
 #winnerSign h2, #loserSign h2 {
@@ -201,6 +199,15 @@ h2 {
     box-shadow: 1px 1px 6px rgba(77, 77, 77, 0.5);
     background-color: rgba(255, 255, 255, 0.65);
     display: none;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    box-shadow: 1px 1px 6px rgba(77, 77, 77, 0.5);
+    background-color: rgba(255, 255, 255, 0.52);
+    bottom: 0;
+    color: #747474;
 }
 
 /*///// user Guest Entry //////*/
