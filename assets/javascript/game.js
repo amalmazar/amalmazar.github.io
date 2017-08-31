@@ -61,20 +61,19 @@ var crystalGame = {
     loseCount: 0,
     crystalValues: [0, 0, 0, 0],
     goodFortune: [
-        "your luck is increasing",
-        "today is a good day to make big decisions",
-        "love will enter your life soon",
-        "it is time for a fresh start",
-        "a lifetime friend will soon be made",
-        "your luck is great, donut calories will not count today"
+        "Your luck is increasing.",
+        "Today is a good day to make big decisions.",
+        "Love will enter your life soon.",
+        "It is time for a fresh start.",
+        "A lifetime friend will soon be made.",
+        "Your luck is great, donut calories will not count today."
     ],
     badFortune: [
-        "your luck is diminishing",
-        "today is not a day to make big decisions, wait until tomorrow",
-        "mecury is in retrograde, avoid risks in communication",
-        "didn't your mother tell you not to pick your nose?",
-        "do not choose a career in simple math",
-        "if a friend questions your loyalty today, they are your enemy-beware",
+        "Your luck is diminishing.",
+        "Today is not a day to make big decisions, wait until tomorrow.",
+        "Mecury is in retrograde, avoid risks.",
+        "Do not choose a career in simple math.",
+        "If a friend questions your loyalty today, they are your enemy. Beware!",
     ]
 }
 
