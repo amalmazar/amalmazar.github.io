@@ -63,7 +63,8 @@ var crystalGame = {
 }
 
 function initializeGame() {
-    playGameSounds("assets/sound/music.mp3");
+    playGameSounds("assets/sound/music.mp3")
+    playGameSounds.volume = .05;
     resetGame();
 }
 
@@ -104,15 +105,15 @@ var generateCrystalValue = function(min, max) {
 // Click crystals to make sound and add value to player count
 
 $(".orange-crystal-box").click(function() {
-    playGameSounds("assets/sound/chime1.wav");
+    playGameSounds("assets/sound/chime4.wav");
     addToPlayerValue(crystalGame.crystalValues[0]);
 });
 $(".green-crystal-box").click(function() {
-    playGameSounds("assets/sound/chime2.wav");
+    playGameSounds("assets/sound/chime4.wav");
     addToPlayerValue(crystalGame.crystalValues[1]);
 });
 $(".red-crystal-box").click(function() {
-    playGameSounds("assets/sound/chime3.wav");
+    playGameSounds("assets/sound/chime4.wav");
     addToPlayerValue(crystalGame.crystalValues[2]);
 });
 $(".blue-crystal-box").click(function() {
