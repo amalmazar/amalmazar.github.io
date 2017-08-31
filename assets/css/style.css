@@ -43,7 +43,6 @@ p {
     color: #747474;
     font-size: 150%;
     font-style: italic;
-    margin-top: -20px !important;
 }
 
 .jumbotron {
@@ -192,10 +191,17 @@ h2 {
 
 #winnerSign p, #loserSign p {
     color: #939393;
-    padding-top: 50px;
+    margin-top: 20px;
     font-size: 150%;
     font-family: 'Playfair Display', serif;
     font-style: italic;
+}
+
+.sans-serif {
+    font-family: 'Josefin Sans', sans-serif !important; /*300, 500*/
+    color: #747474;
+    font-size: 90%;
+    font-weight: 300;
 }
 
 #winnerSign img, #loserSign img {
@@ -206,7 +212,7 @@ h2 {
     position: fixed;
     z-index: 1;
     width: 500px;
-    height: 200px;
+    height: auto;
     top: 50%;
     left: 50%;
     margin-top: -100px;

@@ -59,7 +59,23 @@ var crystalGame = {
     playerValue: 0,
     winCount: 0,
     loseCount: 0,
-    crystalValues: [0, 0, 0, 0]
+    crystalValues: [0, 0, 0, 0],
+    goodFortune: [
+        "your luck is increasing",
+        "today is a good day to make big decisions",
+        "love will enter your life soon",
+        "it is time for a fresh start",
+        "a lifetime friend will soon be made",
+        "your luck is great, donut calories will not count today"
+    ],
+    badFortune: [
+        "your luck is diminishing",
+        "today is not a day to make big decisions, wait until tomorrow",
+        "mecury is in retrograde, avoid risks in communication",
+        "didn't your mother tell you not to pick your nose?",
+        "do not choose a career in simple math",
+        "if a friend questions your loyalty today, they are your enemy-beware",
+    ]
 }
 
 function initializeGame() {
@@ -80,6 +96,8 @@ function hideRealCrystals() {
 
 function resetGame() {
     showRealCrystals();
+    randomGoodFortune();
+    randomBadFortune();
     crystalGame.goalValue = calculateGoalValue(19,120);
     crystalGame.playerValue = 0;
     document.getElementById("goalValue").innerHTML = crystalGame.goalValue;
@@ -144,12 +162,14 @@ function determineWinOrLoss() {
     if(crystalGame.playerValue === crystalGame.goalValue) {
         hideRealCrystals();
         crystalGame.winCount++;
+        document.getElementById("fortune").innerHTML = randomGoodFortune();
         showWinOrLoss("winCount", crystalGame.winCount);
         toggleGameStatusSign("#winnerSign", 'block');
     }
     else if(crystalGame.playerValue > crystalGame.goalValue) {
         hideRealCrystals();
         crystalGame.loseCount++;
+        document.getElementById("fortune2").innerHTML = randomBadFortune();
         showWinOrLoss("lossCount", crystalGame.loseCount);
         toggleGameStatusSign("#loserSign", 'block');
             }
@@ -172,6 +192,15 @@ function userReset() {
     });
 }
 
+// Get random fortune
+function randomGoodFortune() {
+   return crystalGame.goodFortune[Math.floor(Math.random()*crystalGame.goodFortune.length)];
+
+}
+
+function randomBadFortune() {
+    return crystalGame.badFortune[Math.floor(Math.random()*crystalGame.badFortune.length)];
+}
+
 userReset();
 initializeGame();
-console.log(crystalGame);
