@@ -1,0 +1,32 @@
+{
+  "name": "nodehangman",
+  "version": "1.0.0",
+  "description": "homework assignment",
+  "main": "hangman.js",
+  "scripts": {
+    "test": "This right here is a test command."
+  },
+  "keywords": [
+    "Hang",
+    "man.",
+    "Let's",
+    "hang",
+    "out",
+    "man.",
+    "No",
+    "wait.",
+    "I'm",
+    "afrid",
+    "of",
+    "people.",
+    "Let's",
+    "not",
+    "hang",
+    "out."
+  ],
+  "author": "that'd be me, pardner.",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^3.1.1"
+  }
+}
