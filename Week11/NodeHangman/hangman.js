@@ -11,16 +11,11 @@ var remainingGuesses = "";
 var randomWord = "";
 //-------------------------------------------------------//
 
-
 function resetRemainingGuesses() {
     remainingGuesses = 10;
 };
 
-function initializeGame() {
-    resetGame();
-}
-
-function resetGame() {
+function newGame() {
     // set random word
     randomWord = words[Math.floor(Math.random()* words.length)];
     // welcome user
@@ -41,13 +36,16 @@ function getGuess() {
     });
 };
 
-console.log(word.meow);
+newGame();
+
+// need to find a way to create a variable without calling the function immediately?
+var userGuess = getGuess();
 
 word.wordObject(randomWord);
 
 word.compareLetters(userGuess);
 
-var userGuess = getGuess();
+
 
 // 0. Initialize NPM and install inquirer
 // 1. An array of random words in an array of letters 

@@ -8,7 +8,7 @@ var wordToGuess = "";
 
 exports.wordObject = function(poo) {
     
-    console.log(poo);
+    // console.log(poo);
     
     wordToGuess = poo;
     
@@ -26,8 +26,12 @@ exports.wordObject = function(poo) {
 
 exports.compareLetters = function(guessedLetter) {
     for (var i = 0; i < wordToGuess.length; i++) {
-        console.log(wordToGuess[i]);
+        //console.log(wordToGuess[i]);
         if (wordToGuess[i] === guessedLetter) {
+            console.log("true");
+        }
+        else {
+            console.log("false");
         }
         // compare if current letter in wordToGuess loop = user's guessed letter
     }
