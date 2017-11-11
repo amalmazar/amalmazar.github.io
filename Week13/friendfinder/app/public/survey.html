@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+    
+        <meta charset="utf-8">
+        
+        <title>Not Tinder</title>
+        
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:100,400,700" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+        <!-- Homecooked Styles -->
+        <link rel="stylesheet" href="styles.css">
+        
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    
+    <body>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+        <script>
+            // Initializing the select feature for materialize
+         $(document).ready(function() {
+            $('select').material_select();
+          });
+        </script>
+        <container>
+            <div class = "row centered">
+                <h1> Welcome to "Friend" Finder</h1>
+                <h2> we're super discreet </h2>
+            </div>
+            <div class="row main-content">
+                <form class="col s12">
+                    <h2> About You </h2>
+                    <div class="input-field col s6">
+                      <input id="name" type="text" class="validate">
+                      <label for="name">Name</label>
+                    </div>
+                    <div class="input-field col s6">
+                      <input id="photo" type="text" class="validate">
+                      <label for="photo">Photo link</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <select>
+                          <option value="1">1</option>
+                          <option value="1">2</option>
+                          <option value="2">3</option>
+                        </select>
+                        <label>How much do you like cats? On a scale from 1 - 3, 1 being not at all, 3 being the most.</label>
+                      </div>
+                      <div class="input-field col s12">
+                        <select>
+                          <option value="1">1</option>
+                          <option value="1">2</option>
+                          <option value="2">3</option>
+                        </select>
+                        <label>How much do you like dogs? On a scale from 1 - 3, 1 being not at all, 3 being the most.</label>
+                      </div>
+                      <div class="row">
+                        <button class="btn" type="submit" name="action">Submit
+                        </button>
+                      </div>
+                </form>
+              </div>
+        </container>
+        
+    </body>
+    
+</html>
