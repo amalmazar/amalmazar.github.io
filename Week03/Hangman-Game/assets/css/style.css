@@ -1,7 +1,17 @@
+/*// COLORS //
+Dark Green: #082b1f;
+Light Green: #174c49;
+Purple: #9f93ad;
+Pink: #e7b3b1;
+Light Grey: #e9e5e9;
+Dark Grey: #646768;
+
+////////////*/
+
 /*///// fonts and other stuff //////*/
 
 body {
-    background-color: rgb(74, 66, 68) !important;
+    background-color: #646768 !important;
 }
 
 * {
@@ -9,85 +19,13 @@ body {
 }
 
 h1, h2, h3, h4 {
-    color: rgb(74, 66, 68) !important;
+    color: #e9e5e9 !important;
     font-size: 100px;
 }
 
 
 p {
-    color: #ccc;
+    color: #e9e5e9;
     font-size: 20px;
     font-weight: 100;
-}
-
-
-.jumbotron {
-    box-shadow: .5px .5px 10px #000;  
-    background-color: #c6bfbf !important;
-}
-
-.jumbotron h1, p {
-    color: rgb(74, 66, 68) !important;
-}
-
-.row {
-    margin: 40px auto !important;
-    width: 90vw;
-}
-.jumbotron {
-    text-align: center;
-}
-
-/*///// Game Stage //////*/
-
-.game-stage {
-    box-shadow: .5px .5px 10px #000;  
-    background-color: #fff;
-    text-align: center;
-    padding: 20px;
-}
-
-.game-stage h1 {
-    font-size: 80px;   
-}
-
-/*///// user Guest Entry //////*/
-
-.userGuessEntry {
-    margin-top: 20px !important;
-}
-
-
-input {
-    width: 100px;
-    height: 100px;
-    text-align: center;
-    font-size: 50px !important;
-    border: 10px solid rgb(74, 66, 68) !important;
-    font-weight: 100 !important;
-}
-
-/*///// Number of Guesses Left //////*/
-
-.guesses {
-    margin-top: 20px !important;
-    text-align: center !important;
-}
-
-#guessesLeft h3 {
-    width: 100px;
-    height: 100px;
-    padding-top: 10px;
-    font-weight: 100 !important;
-    font-size: 50px !important;
-    border: 10px solid rgb(74, 66, 68) !important;
-    display: block;
-    margin: 0 auto;
-}
-
-/*///// Incorrect Guesses //////*/
-#incorrect {
-    font-size: 50px;
-    font-weight: 100;
-    color: rgb(74, 66, 68);
 }

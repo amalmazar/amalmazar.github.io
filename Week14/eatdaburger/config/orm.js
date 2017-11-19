@@ -7,6 +7,7 @@ var connection =  require("./connection.js");
 //     * `updateOne()` 
 
 //Export the ORM object in `module.exports`.
+
 var orm = {
     selectALL: function(tableData) {
         var queryString = "SELECT * FROM ??";
