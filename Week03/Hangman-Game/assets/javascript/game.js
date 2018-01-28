@@ -78,7 +78,8 @@ $(function() {
     // Checks to see if the pressed key matches any of the letters
     for(var i=0; i < lettersArray.length; i++) {
         if(pressedKey === lettersArray[i]) {
-            console.log("Yes, " + pressedKey + " is equal to " + lettersArray[i])
+            console.log("Yes, " + pressedKey + " is equal to " + lettersArray[i]);
+            // go through the letters array and find the first occurence of the letter matching the pressed key, then put it in the html somehow. :|
         } else {
             console.log("Nope.");
         }
